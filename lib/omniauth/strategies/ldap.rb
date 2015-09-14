@@ -63,7 +63,7 @@ module OmniAuth
         @user_info["uid"]
       }
       info {
-        @user_info['name'] = [@user_info['first_name'], @user_info['last_name']].join(' ')
+        @user_info['name'] = [@user_info['first_name'], @user_info['last_name']].join(' ').force_encoding("UTF-8")
         @user_info
       }
       extra {
